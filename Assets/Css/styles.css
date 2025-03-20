@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.background {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 600%;
+    max-height: 200%;
+    top: -999px;
+    right: -999px;
+    bottom: -999px;
+    left: -999px;
+    margin: auto !important;
+    width: initial;
+}
+
+.title h1 {
+    position: relative;
+    text-align: center;
+    color: yellow;
+    margin-top: 100px;
+    font-size: min(100px, 20vw);
+}
+
+.section-links {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 95vh;
+    width: max(300px, 35vw);
+}
+
+.section-links a {
+    font-size: min(7vw, 28px);
+    text-align: center;
+    color: white;
+}
+
+.characters {
+    position: relative;
+    background-color: black;
+    color: yellow;
+}
+
+.characters h1 {
+    position: relative;
+    text-align: center;
+    top: 50px;
+    font-size: min(100px, 20vw);
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.character-container {
+    position: relative;
+    margin-top: 30px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.character, .character-properties {
+    position: relative;
+    border-top: 1px solid yellow;
+    border-bottom: 1px solid yellow;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.character p, .character-properties p {
+    width: 25%;
+}
+
+.pagination {
+    position: relative;
+    height: 32px;
+    display:flex;
+    flex-direction: row;
+    margin-top: 10px;
+    bottom:5px;
+    justify-content: center;
+}
+
+.pagination a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  .pagination a.active {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
