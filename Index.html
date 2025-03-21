@@ -13,7 +13,8 @@
             <h1>Star Wars Application</h1>
         </div>
         <div class="intro">
-
+            <p>welcome to my star wars application</p>
+            <p>here you can see things about characters and places in the star wars universe</p>
         </div>
         <nav class="section-links">
             <a href="#characters">Characters</a>
@@ -25,9 +26,10 @@
     <div id="characters" class="characters">
         <h1>Characters</h1>
         <div class="search-form">
-            <form id="search-characters" class="search-characters">
-                <label>Search character name</label>
-                <input>
+            <form id="search-characters" class="search-characters" onsubmit="Search();">
+                <label for="search">Search character name</label>
+                <input type="text" id="search" name="search">
+                <input type="submit" value="submit">
             </form>
         </div>
         <div id="character-container" class="character-container">
@@ -55,10 +57,55 @@
     </div>
     <div id="planets" class="planets">
         <h1>Planets</h1>
+        <div class="climate-dropdown">
+            <label for="climate">Pick a climate:</label>
+            <select name="climate" id="climate">
+                <option value="">All</option>
+                <option value="arid">Arid</option>
+                <option value="temperate">Temperate</option>
+                <option value="tropical">Tropical</option>
+                <option value="frozen">Frozen</option>
+                <option value="murky">Murky</option>
+                <option value="windy">Windy</option>
+                <option value="hot">Hot</option>
+                <option value="artificial temperate">Artificial temperate</option>
+                <option value="humid">Humid</option>
+                <option value="frigid">Frigid</option>
+                <option value="moist">Moist</option>
+                <option value="polluted">Polluted</option>
+                <option value="unknown">Unknown</option>
+                <option value="superheated">Superheated</option>
+                <option value="subartic">Subartic</option>
+                <option value="artic">Artic</option>
+                <option value="rocky">Rocky</option>
+            </select>
+        </div>
+        <div id="planet-container" class="planet-container">
+            <div class="planet-properties">
+                <p>Name</p>
+                <p>Population</p>
+                <p>Climate</p>
+                <p>Terrain</p>
+            </div>
+        </div>
     </div>
 
     <div id="films" class="films">
         <h1>Films</h1>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="modal-text">test test test</p>
+            </div>
+        </div>
+        <div id="film-container" class="film-container">
+            <div class="film-properties">
+                <p>Title</p>
+                <p>Release Date</p>
+                <p>Opening crawl</p>
+            </div>
+        </div>
+        
     </div>
 
     <script src="Assets/Js/scripts.js"></script>

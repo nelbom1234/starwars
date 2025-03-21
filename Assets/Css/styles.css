@@ -36,6 +36,14 @@
     font-size: min(100px, 20vw);
 }
 
+.intro {
+    color: yellow;
+    position: relative;
+    text-align: center;
+    margin-top: 150px;
+    font-size: min(30px, 10vw);
+}
+
 .section-links {
     position: absolute;
     display: flex;
@@ -50,13 +58,13 @@
     color: white;
 }
 
-.characters {
+.characters, .planets, .films {
     position: relative;
     background-color: black;
     color: yellow;
 }
 
-.characters h1 {
+.characters h1, .planets h1, .films h1{
     position: relative;
     text-align: center;
     top: 50px;
@@ -70,18 +78,16 @@
     margin-top: 50px;
 }
 
-.character-container {
+.character-container, .planet-container, .film-container {
     position: relative;
     margin-top: 30px;
-    height: 300px;
+    height: auto;
     display: flex;
     flex-direction: column;
     
 }
 
-
-
-.character, .character-properties {
+.character, .character-properties, .planet, .planet-properties, .film, .film-properties {
     position: relative;
     border-top: 1px solid yellow;
     border-bottom: 1px solid yellow;
@@ -91,8 +97,17 @@
     text-align: center;
 }
 
-.character p, .character-properties p {
+.character p, .character-properties p, .planet p, .planet-properties p {
     width: 25%;
+}
+
+.film p, .film-properties p, .film button {
+    width: 33%;
+}
+
+.film button {
+    background-color: black;
+    color: white;
 }
 
 .pagination {
@@ -118,3 +133,51 @@
   }
   
   .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  .climate-dropdown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+.hidden, .hidden p {
+    display: none;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
